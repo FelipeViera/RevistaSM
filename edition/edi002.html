@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            font: normal 20pt Arial;
+            position:absolute; left: 33px; top: 100px;
+        }
+        h1 {
+            position: absolute; left: 33px; 
+        }
+    </style>
+</head>
+<body>
+    <h1> EDIÇÃO 2 </h1>
+    <a href="revista.html"> 
+        <button> voltar </button>
+    </a>
+    <script>
+        
+        //Criação das variaveis//
+        var next = document.createElement('button')
+        var back = document.createElement('button')
+        var img = document.createElement('img')
+        var pag = 0
+
+        // Valor da imagem// 
+        img.src = 'https://i.pinimg.com/564x/7b/08/c3/7b08c30cded67ac69463a6bfd74c0033.jpg'
+
+        //Posicão e tamanho//
+        img.style.cssText = 'position: absolute; left: 33px; top: 150px; width:310px; height:450px;'
+        next.style.cssText = 'position: absolute; left: 188px; top: 600px; width: 155px; height: 40px;'
+        back.style.cssText = 'position: absolute; left: 33px; top: 600px; width:155px; height:40px;'
+
+        //Parte escrita//
+        next.innerText = '>'
+        back.innerHTML = '<'
+
+        //Apresentação no body//
+        document.body.appendChild(next)
+        document.body.appendChild(back)
+        document.body.appendChild(img)
+
+        //programção e lógica//
+
+        next.onclick = function(){
+            pag = pag + 1
+                if (pag == 1){
+                    img.src = "https://i.pinimg.com/564x/6a/f0/25/6af0254fb57d45a5cbf44dc6fdd2997e.jpg"
+                }
+                if (pag == 2) {
+                    img.src = "https://i.pinimg.com/564x/3f/c7/76/3fc776132e9a05298a5e4097a21a0cbd.jpg"
+                }
+                if (pag == 3) {
+                    pag = pag -1
+                }
+
+        }
+
+        back.onclick = function(){
+            pag = pag -1 
+                if (pag == -1) {
+                    pag = pag + 1
+                }
+                if (pag == 0) {
+                    img.src = "https://i.pinimg.com/564x/7b/08/c3/7b08c30cded67ac69463a6bfd74c0033.jpg"
+                }
+                if (pag == 1) {
+                    img.src = "https://i.pinimg.com/564x/6a/f0/25/6af0254fb57d45a5cbf44dc6fdd2997e.jpg"
+                }
+        }
+
+
+    </script>
+</body>
+</html>
