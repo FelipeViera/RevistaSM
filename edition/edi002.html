@@ -6,17 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        button {
-            font: normal 20pt Arial;
-            position:absolute; left: 33px; top: 100px;
-        }
-        h1 {
-            position: absolute; left: 33px; 
-        }
+        body {
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        background-color: rgb(255, 255, 255);
+
+    }
+    div {
+        background-color: rgb(51, 3, 3);
+        height: 130px;
+    }
+    button{
+        font: normal 20pt Arial;
+        position: absolute; left: 33px; top: 160px;
+        
+    }
+    h1{
+        position: absolute; left: 33px; 
+        color: rgb(255, 255, 255);
+    }
     </style>
 </head>
 <body>
     <h1> EDIÇÃO 2 </h1>
+    <div></div>
+    
     <a href="revista.html"> 
         <button> voltar </button>
     </a>
@@ -32,9 +47,9 @@
         img.src = 'https://i.pinimg.com/564x/7b/08/c3/7b08c30cded67ac69463a6bfd74c0033.jpg'
 
         //Posicão e tamanho//
-        img.style.cssText = 'position: absolute; left: 33px; top: 150px; width:310px; height:450px;'
-        next.style.cssText = 'position: absolute; left: 188px; top: 600px; width: 155px; height: 40px;'
-        back.style.cssText = 'position: absolute; left: 33px; top: 600px; width:155px; height:40px;'
+        img.style.cssText = 'position: absolute; left: 33px; top: 200px; width:310px; height:450px;'
+        next.style.cssText = 'position: absolute; left: 188px; top: 650px; width: 155px; height: 40px;'
+        back.style.cssText = 'position: absolute; left: 33px; top: 650px; width:155px; height:40px;'
 
         //Parte escrita//
         next.innerText = '>'

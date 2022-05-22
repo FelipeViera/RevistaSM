@@ -7,17 +7,32 @@
     <title>Document</title>
 </head>
 <style>
+    body {
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        background-color: rgb(255, 255, 255);
+
+    }
+    div {
+        background-color: rgb(51, 3, 3);
+        height: 130px;
+    }
     button{
         font: normal 20pt Arial;
-        position: absolute; left: 33px; top: 100px;
+        position: absolute; left: 33px; top: 160px;
+        
     }
     h1{
         position: absolute; left: 33px;
+        color: white;
     }
+    
 </style>
 <body>
     <h1> EDIÇÃO 1 </h1>
     <a href="revista.html"><button>Retornar</button></a>
+    <div></div>
 
     <script>
         //Criação das variaveis//
@@ -30,9 +45,9 @@
         img.src = 'https://i.pinimg.com/originals/28/af/9e/28af9e2b0a791c8171542e45288ac38d.jpg'
 
         //Posicão e tamanho//
-        img.style.cssText = 'position: absolute; left: 33px; top: 150px; width:310px; height:450px;'
-        next.style.cssText = 'position: absolute; left: 188px; top: 600px; width: 155px; height: 40px;'
-        back.style.cssText = 'position: absolute; left: 33px; top: 600px; width:155px; height:40px;'
+        img.style.cssText = 'position: absolute; left: 33px; top: 200px; width:310px; height:450px;'
+        next.style.cssText = 'position: absolute; left: 188px; top: 650px; width: 155px; height: 40px;'
+        back.style.cssText = 'position: absolute; left: 33px; top: 650px; width:155px; height:40px;'
 
         //Parte escrita//
         next.innerText = '>'
