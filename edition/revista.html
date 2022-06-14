@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <title>Revista</title>
 </head>
 </head>
@@ -75,14 +75,24 @@
     <script>
         //imagem// 
 
+        var bt = document.createElement('button')
         var img2 = document.createElement('img')
         var img = document.createElement('img')
         document.body.appendChild(img2)
         document.body.appendChild(img)
+        document.body.appendChild(bt)
+
         img2.src = 'https://i.pinimg.com/originals/28/af/9e/28af9e2b0a791c8171542e45288ac38d.jpg'
-        img.src = 'https://i.pinimg.com/564x/7b/08/c3/7b08c30cded67ac69463a6bfd74c0033.jpg'
         img.style.cssText = 'position: absolute; left: 33px; top: 320px; width:310px; height:450px;'
         img2.style.cssText = 'position: absolute; left: 33px; top: 900px; width:310px; height:450px;'
+        bt.style.cssText = 'position: absolute; top: 770px;'
+        bt.innerText = 'EDIÇÃO 2'
+
+        bt.onclick = function(){
+            var alerta = 'Que bom que você tem interesse em ler nossa próxima edição,mas ela ainda está em produção. ;)'
+            alert(alerta)
+        }
+
     </script>
 
     
@@ -92,13 +102,11 @@
          para se concretizar um projeto como esse." <br>
          <strong>-Kilp, Matheus </strong>
     </p>
-    <h3> 29/05/2022 <br>
-         13:02
+    <h3> 14/06/2022 <br>
+         14:55
     </h3>
 
-    <a href="edi002.html"> 
-        <button style="top:770px;">EDIÇÃO 2</button>
-    </a>
+
 
     <a href="edi001.html"> <button style="top: 1350px;"> EDIÇÃO 1 </button>
     </a>
