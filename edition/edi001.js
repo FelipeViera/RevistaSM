@@ -52,8 +52,11 @@ function pesquisar(){
             pag = 15
             img.src = "https://i.pinimg.com/originals/72/49/21/724921c30d815cfe2e926a82a51e9045.jpg"
             break
+        case 'sexo':
+            alert('Bro?🤨')
+            break
         default:
-            alert('não entendi')
+            alert('não entendi 🤔')
             break
 
     }
