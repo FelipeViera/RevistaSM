@@ -11,213 +11,24 @@
 </style>
 <body>
     <h1> EDIÇÃO 1 </h1>
-    <a href="revista.html"><button>Retornar</button></a>
+    <a href="revista.html"><button id="a" >Retornar</button></a>
     <div></div>
 
     <input type="search" id="pesq" > 
-    <input type="button" id="btn" onclick="pesquisar()" value="pesquisar">
 
-    <a style="position: absolute; left: 33px; top:730px; font: normal 15pt Arial;" href="e001.pdf" download="e001.pdf" type="application/e001.pdf"> Versão em PDF </a>
+    <input type="button" id="btn" onclick="pesquisar()" value="Pesquisar">
 
-    <div style="background-color: rgb(255, 255, 255);
-    height: 650px;"></div>
+    <a id="linkzao" href="e001.pdf" download="e001.pdf" type="application/e001.pdf"> Versão em PDF </a>
 
-    <div style="background-color: rgb(51, 3, 3);
-    height: 120px;"></div>
-    <script>
-        //Pesquisa//
-        function pesquisar(){
+    <div id="fundo"></div>
 
-            var pesquisa = document.getElementById("pesq")
+    <div id="customi"></div>
 
-            pesquisa = String(pesquisa.value)
-            pesquisa = pesquisa.toLowerCase()
+    <button id="next" onclick="proximor()"></button>
 
-            if (pesquisa == 'animes' ) {
-                pag = 10
-                img.src = 'https://i.pinimg.com/originals/9d/66/5f/9d665f2e5329844fdba5969b9d9f95f9.jpg'
-            }
-            if (pesquisa == 'anime' ) {
-                pag = 10
-                img.src = 'https://i.pinimg.com/originals/9d/66/5f/9d665f2e5329844fdba5969b9d9f95f9.jpg'
-            }
-            if (pesquisa == 'astronomia'){
-                pag = 13
-                img.src = 'https://i.pinimg.com/originals/c1/80/a4/c180a438c7baf2f916a4e99455df3982.jpg'
-            }
-            if (pesquisa == 'esporte'){
-                pag = 8
-                img.src = 'https://i.pinimg.com/originals/89/80/1b/89801bd8545d8a8abc1db768f8c83815.jpg'
-            }
-            if (pesquisa == 'games') {
-                pag = 15
-                img.src = 'https://i.pinimg.com/originals/72/49/21/724921c30d815cfe2e926a82a51e9045.jpg'
-            }
-            if (pesquisa == 'arte') {
-                pag = 4
-                img.src = 'https://i.pinimg.com/originals/e1/ba/af/e1baaf379f4dd23a15dfe5b6b3ee6538.jpg'
-            }
-            if (pesquisa == 'artes') {
-                pag = 4
-                img.src = 'https://i.pinimg.com/originals/e1/ba/af/e1baaf379f4dd23a15dfe5b6b3ee6538.jpg'
-            }
-            if (pesquisa ==  'pauta social'){
-                pag = 2
-                img.src = 'https://i.pinimg.com/originals/e2/b6/e3/e2b6e37f7c72e5e9a3975f9d2e77f16d.jpg'
-            }
-        }
-        //Criação das variaveis//
-        var next = document.createElement('button')
-        var back = document.createElement('button')
-        var img = document.createElement('img')
-        var pag = 0
-
-        // Valor da imagem// 
-        img.src = 'https://i.pinimg.com/originals/28/af/9e/28af9e2b0a791c8171542e45288ac38d.jpg'
-
-        //Posicão e tamanho//
-        img.style.cssText = 'position: absolute; left: 33px; top: 200px; width:310px; height:450px;'
-        next.style.cssText = 'position: absolute; left: 188px; top: 650px; width: 155px; height: 40px;'
-        back.style.cssText = 'position: absolute; left: 33px; top: 650px; width:155px; height:40px;'
-
-        //Parte escrita//
-        next.innerText = '>'
-        back.innerHTML = '<'
-
-        //Apresentação no body//
-        document.body.appendChild(next)
-        document.body.appendChild(back)
-        document.body.appendChild(img)
-
-        //programção e lógica//
-        next.onclick = function(){
-            pag = pag + 1
-                if (pag == 1){
-                    img.src = "https://i.pinimg.com/originals/cb/a8/b6/cba8b6168476ac9d6fa014d3af74a608.jpg"
-                }
-                if (pag == 2){
-
-                    img.src = "https://i.pinimg.com/originals/e2/b6/e3/e2b6e37f7c72e5e9a3975f9d2e77f16d.jpg"
-                }
-
-                if (pag == 3) {
-                    img.src = "https://i.pinimg.com/originals/99/73/37/997337cf7ec7cae2f6bd7175a50e5512.jpg"
-
-                }
-                if (pag == 4){
-                    img.src = "https://i.pinimg.com/originals/e1/ba/af/e1baaf379f4dd23a15dfe5b6b3ee6538.jpg"
-
-                }
-                if (pag == 5) {
-                    img.src = "https://i.pinimg.com/originals/c9/0b/40/c90b40eeb3b78a591f1595ceca359508.jpg"
-                    
-                }
-                if (pag == 6) {
-                    img.src = "https://i.pinimg.com/originals/4d/71/4b/4d714b08a4bbdbc1b7997f4328c0f47a.jpg"
-                }
-                if (pag == 7) {
-                    img.src = "https://i.pinimg.com/originals/43/6b/96/436b9658ff13f61a89675fab315b4903.jpg"
-                }
-                if (pag == 8) {
-                    img.src = "https://i.pinimg.com/originals/89/80/1b/89801bd8545d8a8abc1db768f8c83815.jpg"
-                }
-                if (pag == 9) {
-                    img.src = "https://i.pinimg.com/originals/21/14/bc/2114bcce5f48140d5450f9160c7aff90.jpg"
-                }
-                if (pag == 10){
-                    img.src = "https://i.pinimg.com/originals/9d/66/5f/9d665f2e5329844fdba5969b9d9f95f9.jpg"
-                }
-                if (pag == 11){
-                    img.src = "https://i.pinimg.com/originals/7e/d0/eb/7ed0ebb335309b569b65ab4418aee3f8.jpg"
-                }
-                if (pag == 12){
-                    img.src = "https://i.pinimg.com/originals/0a/92/bc/0a92bc75b10000f9aa9588736c7ced1a.jpg"
-                }
-                if (pag == 13){
-                    img.src = "https://i.pinimg.com/originals/c1/80/a4/c180a438c7baf2f916a4e99455df3982.jpg"
-                }
-                if (pag == 14){
-                    img.src = "https://i.pinimg.com/originals/64/e5/ea/64e5eaa2936137ab2eb0139e7c4e661c.jpg"
-                }
-                if (pag == 15){
-                    img.src = "https://i.pinimg.com/originals/72/49/21/724921c30d815cfe2e926a82a51e9045.jpg"
-                }
-                if (pag == 16){
-                    img.src = "https://i.pinimg.com/originals/1f/9a/67/1f9a675f16780e06610bf717b9a0f05c.jpg"
-                }
-                if (pag == 17){
-                    img.src = "https://i.pinimg.com/originals/e0/71/d1/e071d1e661abefbe37fd7be1a6311875.jpg"
-                } 
-                if (pag == 18) {
-                    img.src = "https://i.pinimg.com/originals/59/6b/94/596b943ae72b167dc23e1062dff3b733.jpg"
-                }
-                if (pag == 19) {
-                    pag = pag -1
-                }
-        }
-
-        back.onclick = function(){
-            pag = pag -1 
-                if (pag == -1) {
-                    pag = pag + 1
-                }
-                if (pag == 0) {
-                    img.src = "https://i.pinimg.com/originals/28/af/9e/28af9e2b0a791c8171542e45288ac38d.jpg"
-                }
-                if (pag == 1) {
-                    img.src = "https://i.pinimg.com/originals/cb/a8/b6/cba8b6168476ac9d6fa014d3af74a608.jpg"
-                }
-                if (pag == 2) {
-                    img.src = "https://i.pinimg.com/originals/e2/b6/e3/e2b6e37f7c72e5e9a3975f9d2e77f16d.jpg"
-
-                }
-                if (pag == 3) {
-                    img.src = "https://i.pinimg.com/originals/99/73/37/997337cf7ec7cae2f6bd7175a50e5512.jpg"
-                }
-                if (pag == 4){
-                    img.src = "https://i.pinimg.com/originals/e1/ba/af/e1baaf379f4dd23a15dfe5b6b3ee6538.jpg"
-                }
-                if (pag == 5) {
-                    img.src = "https://i.pinimg.com/originals/c9/0b/40/c90b40eeb3b78a591f1595ceca359508.jpg"
-                }
-                if (pag == 6) {
-                    img.src = "https://i.pinimg.com/originals/4d/71/4b/4d714b08a4bbdbc1b7997f4328c0f47a.jpg"
-                }
-                if (pag == 7) {
-                    img.src = "https://i.pinimg.com/originals/43/6b/96/436b9658ff13f61a89675fab315b4903.jpg"
-                }
-                if (pag == 8) {
-                    img.src = "https://i.pinimg.com/originals/89/80/1b/89801bd8545d8a8abc1db768f8c83815.jpg"
-                }
-                if (pag == 9) {
-                    img.src = "https://i.pinimg.com/originals/21/14/bc/2114bcce5f48140d5450f9160c7aff90.jpg"
-                }
-                if (pag == 10){
-                    img.src = "https://i.pinimg.com/originals/9d/66/5f/9d665f2e5329844fdba5969b9d9f95f9.jpg"
-                }
-                if (pag == 11){
-                    img.src = "https://i.pinimg.com/originals/7e/d0/eb/7ed0ebb335309b569b65ab4418aee3f8.jpg"
-                }
-                if (pag == 12){
-                    img.src = "https://i.pinimg.com/originals/0a/92/bc/0a92bc75b10000f9aa9588736c7ced1a.jpg"
-                }
-                if (pag == 13){
-                    img.src = "https://i.pinimg.com/originals/c1/80/a4/c180a438c7baf2f916a4e99455df3982.jpg"
-                }
-                if (pag == 14){
-                    img.src = "https://i.pinimg.com/originals/64/e5/ea/64e5eaa2936137ab2eb0139e7c4e661c.jpg"
-                }
-                if (pag == 15){
-                    img.src = "https://i.pinimg.com/originals/72/49/21/724921c30d815cfe2e926a82a51e9045.jpg"
-                }
-                if (pag == 16){
-                    img.src = "https://i.pinimg.com/originals/1f/9a/67/1f9a675f16780e06610bf717b9a0f05c.jpg"
-                }
-                if (pag == 17){
-                    img.src = "https://i.pinimg.com/originals/e0/71/d1/e071d1e661abefbe37fd7be1a6311875.jpg"
-                }
-        }
-
-    </script>
+    <button id="back" onclick="voltar()" ></button>
+    
+    <img  id="imagem" src="https://i.pinimg.com/originals/28/af/9e/28af9e2b0a791c8171542e45288ac38d.jpg">
+    <script src="edi001.js"></script>
 </body>
 </html>
