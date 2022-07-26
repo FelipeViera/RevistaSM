@@ -57,13 +57,14 @@ h1{
     background-color: rgb(51, 3, 3);
     color:rgb(255, 255, 255);
     border-radius:  10px;
-    position: absolute; left: 208px; top: 220px;
+    position: absolute; left: 215px; top: 220px;
     width: 100px;
     height: 24px;
 
 }
 #a {
     border-radius: 10px;
+    color: black;
     background-color: white;
     font: normal 20pt Arial;
 }
